@@ -21,4 +21,13 @@ describe('HomePage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+
+  // test pour récupérer une réponse aléatoir
+  it('Doit afficher une réponse aleatoir', () => {
+    expect(typeof component.giveAnswer()).toBe("string");
+  });
+  
+  
+
 });
