@@ -21,13 +21,26 @@ describe('HomePage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
 
-  // test pour récupérer une réponse aléatoir
-  it('Doit afficher une réponse aleatoir', () => {
+  it("doit afficher un tableau non vide", () => {
+    let result = component.giveAnswer();
+    
+    expect(Array.isArray(result)).toBeTruthy;
+    expect(result.length).toBeGreaterThan(0);
+  });
+
+  it("renvoi une reponses aléatoir sous forme de string", () => {
     expect(typeof component.giveAnswer()).toBe("string");
   });
+ 
+
+  it("doit voir si il y a une réponse Yes et une reponse No dans la liste des réponses", () => {
+    let result = component.getAnswers();
+
+    expect(result).toContain("Yes");
+    expect(result).toContain("No");
+  });
   
-  
+ 
 
 });
