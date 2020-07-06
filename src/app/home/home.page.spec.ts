@@ -31,7 +31,7 @@ describe('HomePage', () => {
     expect(result.length).toBeGreaterThan(0);
   });
 
-  it("renvoi une reponse aléatoir sous forme de string", () => {
+  it("renvoie une reponse aléatoir sous forme de string", () => {
     expect(typeof component.giveAnswer()).toBe("string");
   });
  
