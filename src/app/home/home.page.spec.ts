@@ -22,6 +22,8 @@ describe('HomePage', () => {
     expect(component).toBeTruthy();
   });
 
+
+  // mes tests unitaires
   it("doit afficher un tableau non vide", () => {
     let result = component.giveAnswer();
     
@@ -29,7 +31,7 @@ describe('HomePage', () => {
     expect(result.length).toBeGreaterThan(0);
   });
 
-  it("renvoi une reponses aléatoir sous forme de string", () => {
+  it("renvoi une reponse aléatoir sous forme de string", () => {
     expect(typeof component.giveAnswer()).toBe("string");
   });
  
